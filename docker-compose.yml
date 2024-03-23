@@ -1,0 +1,13 @@
+services:
+  codeserver:
+    image: codeberg.org/forgejo/forgejo:1.21
+    container_name: stokejo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /stokejo:/data
+    ports:
+      - "3000:3000"
