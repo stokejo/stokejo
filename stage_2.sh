@@ -15,9 +15,9 @@ dpkg-reconfigure tzdata keyboard-configuration console-setup
 apt install dpkg-dev linux-headers-generic linux-image-generic
 apt install dkms
 
-apt install -t bullseye-backports zfs-dkms --no-install-recommends
-apt install -t bullseye-backports zfsutils-linux
-apt install -t bullseye-backports zfs-initramfs
+apt install -t bookworm-backports zfs-dkms --no-install-recommends
+apt install -t bookworm-backports zfsutils-linux
+apt install -t bookworm-backports zfs-initramfs
 
 echo REMAKE_INITRD=yes > /etc/dkms/zfs.conf
 

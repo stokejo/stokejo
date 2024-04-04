@@ -7,14 +7,14 @@ HOSTNAME="stokejo"
 DISK="/dev/disk/by-id/"
 
 cat << EOF >> /etc/apt/sources.list.d/backports.list
-deb http://deb.debian.org/debian bullseye-backports main contrib
+deb http://deb.debian.org/debian bookworm-backports main contrib
 EOF
 
 apt update
 
 apt install dkms debootstrap parted
-apt install -t bullseye-backports zfs-dkms --no-install-recommends
-apt install -t bullseye-backports util-linux zfsutils-linux
+apt install -t bookworm-backports zfs-dkms --no-install-recommends
+apt install -t bookworm-backports util-linux zfsutils-linux
 
 . wipe.sh
 
@@ -40,7 +40,7 @@ zfs mount $ROOT_POOL_NAME/ROOT
 
 zfs create -o mountpoint=/boot $BOOT_POOL_NAME/BOOT
 
-debootstrap bullseye /mnt
+debootstrap bookworm /mnt
 
 mkdir /mnt/etc/zfs
 cp /etc/zfs/zpool.cache /mnt/etc/zfs/
@@ -51,18 +51,18 @@ hostname > /mnt/etc/hostname
 rm /mnt/etc/apt/sources.list
 
 cat << EOF >> /mnt/etc/apt/sources.list
-deb http://deb.debian.org/debian bullseye main contrib
-deb-src http://deb.debian.org/debian bullseye main contrib
+deb http://deb.debian.org/debian bookworm main contrib
+deb-src http://deb.debian.org/debian bookworm main contrib
 
-deb http://deb.debian.org/debian-security bullseye-security main contrib
-deb-src http://deb.debian.org/debian-security bullseye-security main contrib
+deb http://deb.debian.org/debian-security bookworm-security main contrib
+deb-src http://deb.debian.org/debian-security bookworm-security main contrib
 
-deb http://deb.debian.org/debian bullseye-updates main contrib
-deb-src http://deb.debian.org/debian bullseye-updates main contrib
+deb http://deb.debian.org/debian bookworm-updates main contrib
+deb-src http://deb.debian.org/debian bookworm-updates main contrib
 EOF
 
 cat << EOF >> /mnt/etc/apt/sources.list.d/backports.list
-deb http://deb.debian.org/debian bullseye-backports main contrib
+deb http://deb.debian.org/debian bookworm-backports main contrib
 EOF
 
 mount --make-private --rbind /sys /mnt/sys && mount --make-private --rbind /proc /mnt/proc
