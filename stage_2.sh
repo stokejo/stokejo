@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ln -s /proc/self/mounts /etc/mtab
-
 apt update && apt install locales
 
 # Choose en_US.UTF-8 then C.UTF8
