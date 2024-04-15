@@ -1,14 +1,12 @@
 services:
   codeserver:
-    image: codeberg.org/forgejo/forgejo:1.21
+    image: gitlab/gitlab-ce:latest
     container_name: stokejo
-    environment:
-      - USER_UID=1000
-      - USER_GID=1000
     restart: always
     volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /stokejo:/data
+      - /stokejo/opt:/var/opt/gitlab
+      - /stokejo/inf:/var/log/gitlab
+      - /stokejo/etc:/etc/gitlab
     ports:
       - "127.0.0.1:3000:3000"
       - "127.0.0.1:2020:22"
