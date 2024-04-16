@@ -63,7 +63,7 @@ external_url 'https://stokejo.com'
 ## gitlab.yml configuration
 ##! Docs: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/gitlab.yml.md
 ################################################################################
-# gitlab_rails['gitlab_ssh_host'] = 'ssh.host_example.com'
+gitlab_rails['gitlab_ssh_host'] = 'localhost'
 # gitlab_rails['gitlab_ssh_user'] = ''
 # gitlab_rails['time_zone'] = 'UTC'
 
@@ -685,7 +685,7 @@ external_url 'https://stokejo.com'
 # high_availability['mountpoint'] = ["/var/opt/gitlab/git-data", "/var/opt/gitlab/gitlab-rails/shared"]
 
 ### GitLab Shell settings for GitLab
-# gitlab_rails['gitlab_shell_ssh_port'] = 22
+gitlab_rails['gitlab_shell_ssh_port'] = 2020
 # gitlab_rails['gitlab_shell_git_timeout'] = 800
 
 ### Extra customization
