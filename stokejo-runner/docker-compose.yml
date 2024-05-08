@@ -1,0 +1,8 @@
+services:
+  runnerserver:
+    image: gitlab/gitlab-runner:latest
+    container_name: stokejo-runner
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /stokejo/runner/conf:/etc/gitlab-runner
