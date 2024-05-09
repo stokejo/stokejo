@@ -940,7 +940,7 @@ gitlab_rails['gitlab_shell_ssh_port'] = 2020
 ##! Docs: https://docs.gitlab.com/ee/administration/packages/container_registry.html
 ################################################################################
 
-# registry_external_url 'https://registry.example.com'
+registry_external_url 'https://stokejo.com:5050'
 
 ### Settings used by GitLab application
 # gitlab_rails['registry_enabled'] = true
@@ -2276,16 +2276,18 @@ nginx['proxy_set_headers'] = {
 # `nginx['some_setting']` WILL NOT be automatically replicated as
 # `registry_nginx['some_setting']` and should be set separately.
 
+registry_nginx['listen_https'] = false
+
 # Below you can find settings that are exclusive to "Registry NGINX"
 # registry_nginx['enable'] = false
 
-# registry_nginx['proxy_set_headers'] = {
-#  "Host" => "$http_host",
+registry_nginx['proxy_set_headers'] = {
+  "Host" => "stokejo.com:5050",
 #  "X-Real-IP" => "$remote_addr",
 #  "X-Forwarded-For" => "$proxy_add_x_forwarded_for",
 #  "X-Forwarded-Proto" => "https",
 #  "X-Forwarded-Ssl" => "on"
-# }
+}
 
 # When the registry is automatically enabled using the same domain as `external_url`,
 # it listens on this port
