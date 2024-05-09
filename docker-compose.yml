@@ -9,5 +9,6 @@ services:
       - /stokejo/inf:/var/log/gitlab
       - /stokejo/etc:/etc/gitlab
     ports:
+      - "127.0.0.1:5050:5050"
       - "127.0.0.1:3000:3000"
       - "127.0.0.1:2020:22"
