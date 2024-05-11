@@ -5,4 +5,4 @@ services:
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /stokejo/runner/conf:/etc/gitlab-runner
+      - /stokejo/run/stokejo:/etc/gitlab-runner
