@@ -1,6 +1,6 @@
 services:
   codeserver:
-    image: gitlab/gitlab-ee:16.11.1-ee.0
+    image: gitlab/gitlab-ee:16.11.2-ee.0
     container_name: stokejo
     restart: always
     volumes:
