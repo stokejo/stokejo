@@ -1,0 +1,11 @@
+services:
+  chatserver:
+    image: stokejo.com:5050/stokejo/pohja:pohja
+    container_name: pohja
+    restart: always
+    environment:
+      CONDUIT_CONFIG: "/pohja/pohja.toml"
+    volumes:
+      - /stokejo/pohja:/pohja
+    ports:
+      - "127.0.0.1:8448:6167"
