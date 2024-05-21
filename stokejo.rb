@@ -940,7 +940,7 @@ gitlab_rails['gitlab_shell_ssh_port'] = 2020
 ##! Docs: https://docs.gitlab.com/ee/administration/packages/container_registry.html
 ################################################################################
 
-registry_external_url 'https://stokejo.com:5050'
+registry_external_url 'https://cr.yoke.rs'
 
 ### Settings used by GitLab application
 # gitlab_rails['registry_enabled'] = true
@@ -2282,7 +2282,7 @@ registry_nginx['listen_https'] = false
 # registry_nginx['enable'] = false
 
 registry_nginx['proxy_set_headers'] = {
-  "Host" => "stokejo.com:5050",
+  "Host" => "cr.yoke.rs",
 #  "X-Real-IP" => "$remote_addr",
 #  "X-Forwarded-For" => "$proxy_add_x_forwarded_for",
 #  "X-Forwarded-Proto" => "https",
