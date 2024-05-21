@@ -1,6 +1,6 @@
 services:
   chatserver:
-    image: stokejo.com:5050/stokejo/pohja:pohja
+    image: cr.yoke.rs/stokejo/pohja:pohja
     container_name: pohja
     restart: always
     environment:
