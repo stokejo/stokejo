@@ -2291,7 +2291,7 @@ registry_nginx['proxy_set_headers'] = {
 
 # When the registry is automatically enabled using the same domain as `external_url`,
 # it listens on this port
-# registry_nginx['listen_port'] = 5050
+registry_nginx['listen_port'] = 5050
 
 ################################################################################
 ## Prometheus
