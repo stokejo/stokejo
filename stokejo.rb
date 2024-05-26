@@ -82,15 +82,15 @@ gitlab_rails['gitlab_ssh_host'] = 'localhost'
 ###! Docs: https://docs.gitlab.com/omnibus/settings/smtp.html
 ###! **Use smtp instead of sendmail/postfix.**
 
-# gitlab_rails['smtp_enable'] = true
-# gitlab_rails['smtp_address'] = "smtp.server"
-# gitlab_rails['smtp_port'] = 465
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.zeptomail.eu"
+gitlab_rails['smtp_port'] = 465
 # gitlab_rails['smtp_user_name'] = "smtp user"
 # gitlab_rails['smtp_password'] = "smtp password"
 # gitlab_rails['smtp_domain'] = "example.com"
 # gitlab_rails['smtp_authentication'] = "login"
 # gitlab_rails['smtp_enable_starttls_auto'] = true
-# gitlab_rails['smtp_tls'] = false
+gitlab_rails['smtp_tls'] = true
 # gitlab_rails['smtp_pool'] = false
 
 ###! **Can be: 'none', 'peer', 'client_once', 'fail_if_no_peer_cert'**
@@ -106,8 +106,8 @@ gitlab_rails['gitlab_ssh_host'] = 'localhost'
 
 ##! If your SMTP server does not like the default 'From: gitlab@gitlab.example.com'
 ##! can change the 'From' with this setting.
-# gitlab_rails['gitlab_email_from'] = 'example@example.com'
-# gitlab_rails['gitlab_email_display_name'] = 'Example'
+gitlab_rails['gitlab_email_from'] = 'stokejo@mekosko.network'
+gitlab_rails['gitlab_email_display_name'] = 'stokejo'
 # gitlab_rails['gitlab_email_reply_to'] = 'noreply@example.com'
 # gitlab_rails['gitlab_email_subject_suffix'] = ''
 # gitlab_rails['gitlab_email_smime_enabled'] = false
