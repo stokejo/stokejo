@@ -8,4 +8,4 @@ services:
     volumes:
       - /stokejo/pohja:/pohja
     ports:
-      - "127.0.0.1:8448:6167"
+      - "127.0.0.1:6167:6167"
