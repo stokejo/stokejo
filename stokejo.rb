@@ -106,7 +106,7 @@ gitlab_rails['smtp_tls'] = true
 
 ##! If your SMTP server does not like the default 'From: gitlab@gitlab.example.com'
 ##! can change the 'From' with this setting.
-gitlab_rails['gitlab_email_from'] = 'stokejo@mekosko.network'
+gitlab_rails['gitlab_email_from'] = 'stokejo@stokejo.com'
 gitlab_rails['gitlab_email_display_name'] = 'stokejo'
 # gitlab_rails['gitlab_email_reply_to'] = 'noreply@example.com'
 # gitlab_rails['gitlab_email_subject_suffix'] = ''
