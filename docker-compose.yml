@@ -1,11 +1,10 @@
 services:
   codeserver:
-    image: gitlab/gitlab-ee:latest
+    image: gitlab/gitlab-ce:latest
     container_name: stokejo
     restart: always
     volumes:
       - /stokejo/opt:/var/opt/gitlab
-      - /stokejo/kkk:${KEY_PATH}
       - /stokejo/inf:/var/log/gitlab
       - /stokejo/etc:/etc/gitlab
     ports:
