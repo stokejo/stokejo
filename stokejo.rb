@@ -2316,7 +2316,7 @@ registry_nginx['listen_https'] = false
 # registry_nginx['enable'] = false
 
 registry_nginx['proxy_set_headers'] = {
-  "Host" => "cr.yoke.rs",
+  "Host" => "stokejo.com",
 #  "X-Real-IP" => "$remote_addr",
 #  "X-Forwarded-For" => "$proxy_add_x_forwarded_for",
 #  "X-Forwarded-Proto" => "https",
