@@ -1749,7 +1749,7 @@ registry_external_url 'https://stokejo.com'
 nginx['listen_port'] = 3000
 
 ##! **Override only if your reverse proxy internally communicates over HTTP**
-##! Docs: https://docs.gitlab.com/omnibus/settings/nginx.html#supporting-proxied-ssl
+##! Docs: https://docs.gitlab.com/omnibus/settings/ssl/#configure-a-reverse-proxy-or-load-balancer-ssl-termination
 nginx['listen_https'] = false
 
 ##! **Override only if you use a reverse proxy with proxy protocol enabled**
