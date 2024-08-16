@@ -63,7 +63,7 @@ external_url 'https://stokejo.com'
 ## gitlab.yml configuration
 ##! Docs: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/gitlab.yml.md
 ################################################################################
-gitlab_rails['gitlab_ssh_host'] = 'localhost'
+gitlab_rails['gitlab_ssh_host'] = 'stokejo.com'
 # gitlab_rails['gitlab_ssh_user'] = ''
 # gitlab_rails['time_zone'] = 'UTC'
 
