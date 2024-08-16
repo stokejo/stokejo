@@ -960,7 +960,7 @@ gitlab_rails['gitlab_email_display_name'] = 'stokejo'
 ##! Docs: https://docs.gitlab.com/ee/administration/packages/container_registry.html
 ################################################################################
 
-registry_external_url 'https://cr.yoke.rs'
+registry_external_url 'https://stokejo.com'
 
 ### Settings used by GitLab application
 # gitlab_rails['registry_enabled'] = true
