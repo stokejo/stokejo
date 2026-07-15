@@ -1,0 +1,20 @@
+services:
+  vllm:
+    image: vllm/vllm-openai-rocm:latest
+    command: ["/bin/bash", "/serve.sh"]
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      - /root/.cache/huggingface:/root/.cache/huggingface
+      - /root/serve.sh:/serve.sh
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    group_add:
+      - video
+    network_mode: host
+    ipc: host
