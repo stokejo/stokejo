@@ -1,12 +1,12 @@
 services:
   vllm:
     image: vllm/vllm-openai-rocm:latest
-    command: ["/bin/bash", "/serve.sh"]
+    entrypoint: ["/bin/bash", "/serve.sh"]
     environment:
       - HF_TOKEN=${HF_TOKEN}
     volumes:
-      - /root/.cache/huggingface:/root/.cache/huggingface
-      - /root/serve.sh:/serve.sh
+      - ~/.cache/huggingface:/root/.cache/huggingface
+      - ./serve.sh:/serve.sh
     devices:
       - /dev/kfd
       - /dev/dri
