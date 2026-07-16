@@ -1,6 +1,7 @@
 services:
   vllm:
     image: vllm/vllm-openai-rocm:latest
+    restart: unless-stopped
     entrypoint: ["/bin/bash", "/serve.sh"]
     environment:
       - HF_TOKEN=${HF_TOKEN}
